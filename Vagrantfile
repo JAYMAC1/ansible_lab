@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     web.vm.box = "bento/centos-7.4"
     web.vm.hostname = "web"
     web.vm.network "private_network", ip: "192.168.33.20"
-    web.vm.network "forward_port", guest: 80, host: 8080
+    web.vm.network "forwarded_port", guest: 80, host: 8080
   end
 
   config.vm.define "db" do | db |
